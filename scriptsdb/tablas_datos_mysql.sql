@@ -1,8 +1,8 @@
 USE dbcontext;
 
-DROP TABLE IF EXISTS Tbl_WindowDataGame;
+DROP TABLE IF EXISTS tbl_windowdatagame;
 
-CREATE TABLE Tbl_WindowDataGame(
+CREATE TABLE tbl_windowdatagame(
 	Id int NOT NULL AUTO_INCREMENT,
 	IdRow varchar(40) NULL,
 	Window int NOT NULL,
@@ -46,6 +46,7 @@ CREATE TABLE Tbl_WindowDataGame(
 	RecieveMessages int NULL,
 	Armour int NULL,
 	Shots int NULL,
+	FailedShot int NULL,
 	EffectiveShot int NULL,
 	EffectiveShotEnemy int NULL,
 	EffectiveShotTeammate int NULL,
@@ -99,7 +100,7 @@ CREATE TABLE Tbl_WindowDataGame(
 
 DELIMITER //
 DROP TRIGGER IF EXISTS idrow;
-CREATE TRIGGER idrow BEFORE INSERT ON Tbl_WindowDataGame
+CREATE TRIGGER idrow BEFORE INSERT ON tbl_windowdatagame
 FOR EACH ROW 
 BEGIN
   DECLARE Game VARCHAR(4);
@@ -146,9 +147,9 @@ END; //
 DELIMITER ;
 
 
-DROP TABLE IF EXISTS Tbl_DataGame;
+DROP TABLE IF EXISTS tbl_datagame;
 
-CREATE TABLE Tbl_DataGame(
+CREATE TABLE tbl_datagame(
 	Id int NOT NULL AUTO_INCREMENT,
 	IdRow varchar(40) NULL,
 	Window int NOT NULL,
@@ -192,6 +193,7 @@ CREATE TABLE Tbl_DataGame(
 	RecieveMessages int NULL,
 	Armour int NULL,
 	Shots int NULL,
+	FailedShot int NULL,
 	EffectiveShot int NULL,
 	EffectiveShotEnemy int NULL,
 	EffectiveShotTeammate int NULL,
@@ -245,7 +247,7 @@ CREATE TABLE Tbl_DataGame(
 
 DROP TRIGGER IF EXISTS idrowdata;
 DELIMITER //
-CREATE TRIGGER idrowdata BEFORE INSERT ON Tbl_DataGame
+CREATE TRIGGER idrowdata BEFORE INSERT ON tbl_datagame
 FOR EACH ROW 
 BEGIN
   DECLARE Game VARCHAR(4);
@@ -290,9 +292,9 @@ BEGIN
 END; //
 DELIMITER ;
 
-DROP TABLE IF EXISTS Tbl_Game;
+DROP TABLE IF EXISTS tbl_game;
 
-CREATE TABLE Tbl_Game(
+CREATE TABLE tbl_game(
 	Id int NOT NULL AUTO_INCREMENT,
 	Date VARCHAR(20),
 	Time VARCHAR(20),
