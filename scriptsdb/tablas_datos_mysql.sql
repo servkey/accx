@@ -95,6 +95,14 @@ CREATE TABLE tbl_windowdatagame(
 	teammateDestroyed int NULL,
 	enemyDestroyed int NULL,
 	
+	explode int NULL,
+	failedExplode int NULL,
+	effectiveExplode int NULL,
+	effectiveExplodeEnemy int NULL,
+	effectiveExplodeTeammate int NULL,
+	effectiveExplodeToStandardBearer int NULL,
+	standardBearerEffectiveExplode int NULL,
+
 	PRIMARY KEY (Id)
 );
 
@@ -240,6 +248,14 @@ CREATE TABLE tbl_datagame(
 	state int NULL,
 	teammateDestroyed int NULL,
 	enemyDestroyed int NULL,
+
+	explode int NULL,
+	failedExplode int NULL,
+	effectiveExplode int NULL,
+	effectiveExplodeEnemy int NULL,
+	effectiveExplodeTeammate int NULL,
+	effectiveExplodeToStandardBearer int NULL,
+	standardBearerEffectiveExplode int NULL,
 
 	PRIMARY KEY (Id)
 );
