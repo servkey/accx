@@ -103,6 +103,13 @@ CREATE TABLE tbl_windowdatagame(
 	effectiveExplodeToStandardBearer int NULL,
 	standardBearerEffectiveExplode int NULL,
 
+	xF0 float NULL,
+	yF0 float NULL,
+	zF0 float NULL,
+	xF1 float NULL,
+	yF1 float NULL,
+	zF1 float NULL,
+
 	PRIMARY KEY (Id)
 );
 
@@ -256,6 +263,13 @@ CREATE TABLE tbl_datagame(
 	effectiveExplodeTeammate int NULL,
 	effectiveExplodeToStandardBearer int NULL,
 	standardBearerEffectiveExplode int NULL,
+
+	xF0 float NULL,
+	yF0 float NULL,
+	zF0 float NULL,
+	xF1 float NULL,
+	yF1 float NULL,
+	zF1 float NULL,
 
 	PRIMARY KEY (Id)
 );
